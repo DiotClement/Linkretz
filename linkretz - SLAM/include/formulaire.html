@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="description" content="fDemande de documentation Linkretz">
+    <title>test check box</title>
+</head>
+<body>
+<h1>Demande de documentation</h1>
+    <form action="demande_info_ajout.php" method="post">
+        Nom : <input type="text" name="nom" id="nom" required />
+        E-mail : <input type ="mail" name="email" id="email" required />
+        Téléphone : <input type="tel" name="teleph" id="teleph" />
+        <br><br>
+
+        Depuis-quand nous connaissez-vous ? : <input type="date" name="date_decouverte" id="date_dec" />
+        <br><br>
+
+        Souhaitez-vous nous rencontrer ?:
+        oui <input type="radio" name="rencontre" id="rencOui" checked value="O"/>
+        non <input type="radio" name="rencontre" id="rencNon" value='N' />
+        <br>
+
+        Comment avez-vous découvert notre site ?
+        <select name="origine" id="orig">
+            <option value="1" selected>En surfant sur internet</option>
+            <option value="2">Par un ami</option>
+            <option value="4">Par un autre site</option>
+            <option value="3">Par hasard</option>
+            <option value="9">autrement</option>
+        </select>
+        <br><br>
+
+        Quels sont vos loisirs ?
+        <select name="loisir[]" id="loisir" multiple>
+            <option value="100" selected>cyclisme</option>
+            <option value="101">alpinisme</option>
+            <option value="102">équitation</option>
+            <option value="3">sports de combat</option>
+            <option value="9">lecture</option>
+        </select>
+        <br><br>
+
+        Je souhaite obtenir <br/>
+        <input type="checkbox" name="newsletter" id="newsletter" value = "new" checked />
+        <label for="newsletter"> votre newsletter </label><br>
+
+        <input type="checkbox" name="appel" id="appel" value = "new" checked />
+        <label for="newsletter"> que vous m'appeliez </label><br>
+
+        <input type="checkbox" name="newsletter" id="newsletter" value = "new" checked />
+        <label for="newsletter"> votre newsletter </label><br>
+        <br><br>
+
+        Vos remarques :<br>
+        <textarea name="remarque" id="remarque" cols="50" rows="3"></textarea>
+        <br>
+
+        <input type ="submit" name="valider" id="valider" value= "Envoyer" />
+    </form>
+</body>     
+</html>
